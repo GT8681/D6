@@ -86,32 +86,41 @@
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
 
-      const changeTitle =  document.getElementsByTagName("h1")[0];
-      console.log(changeTitle);
-      changeTitle.innerText = "PAGGINA PROVA";
-      console.log(changeTitle);
+      const changeTitle = function(){
+        const title = document.querySelector('h1');
+        title.innerText = ("nuovo titolo by gt86");
 
+
+      }
+      changeTitle();
 
 
 
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
        */
-        const addClassToTitle = document.createElement("div");
-        addClassToTitle.className = "myHeading";
-        console.log(addClassToTitle);
-        
+        const addClassToTitle = function(){
+          const title = document.querySelector('h1');
+          title.classList.add('myHeading');
 
+
+        }
+         addClassToTitle()
 
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
-        const changePcontent = document.getElementsByTagName("p");
-        const cambiTest= changePcontent.className ="es3";
-        cambiTest.innerText="oggi e una bellissima giornata";
+        const changePcontent = function(){
+          const parag =document.querySelectorAll('div p')
+          for(let i = 0; i<parag.length;i++){
+          const pel = parag[i]
+          parag[i].innerText='nuovo testo by gt86'
+          }
 
 
+        }
+        changePcontent()
 
 
 
@@ -119,25 +128,48 @@
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-      const changeUrls = function () {}
+      const changeUrls = function () {
+         const link = document.querySelectorAll('a:not(footer a)')
+         for(let i = 0; i<link.length;i++){
+          link[i].href = 'http://wwww.google.com'
+         }
+       }
+       changeUrls()
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-      const addToTheSecond = function () {}
+      const addToTheSecond = function (cont) {
+       const ul = document.getElementById('secondList')
+       const li = document.createElement('li')
+       li.innerText= cont
+       ul.appendChild(li)
+      }
+      addToTheSecond('nuovo elemento')
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
     */
 
-      const addParagraph = function () {}
+      const addParagraph = function (cont) {
+         const div = document.querySelectorAll('div'[0])
+
+         let par = document.createElement('p')
+         par.innerText = cont
+         div.appendChild(par)
+      }
+      addParagraph('nuovo parargrafo')
 
       /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
 
-      const hideFirstUl = function () {}
+      const hideFirstUl = function () {
+       const ul = document.getElementById('firstList') 
+       ul.remove()
+      }
+  hideFirstUl()
 
       /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
