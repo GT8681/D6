@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <div>
+    <div class="myHeading">
       <h1>Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
@@ -97,7 +97,9 @@
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
        */
-        const addClassToTitle = function () {}
+        const addClassToTitle = document.createElement("div");
+        addClassToTitle.className = "myHeading";
+        console.log(addClassToTitle);
         
 
 
