@@ -169,25 +169,50 @@
        const ul = document.getElementById('firstList') 
        ul.remove()
       }
-  hideFirstUl()
+      hideFirstUl()
 
       /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
-      const paintItGreen = function () {}
+      const paintItGreen = function () {
+        const uls = document.querySelectorAll("ul")
+        uls.forEach(ul => {ul.style.backgroundColor = "green"})
+
+      }
+        paintItGreen()
+
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {}
+      const makeItClickable = function () {
 
+       const h1 = document.querySelector("h1");
+
+       h1.onclick = function(){
+       h1.innerText = h1.innerText.slice(0,-1)
+    }
+  }
+     makeItClickable()
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+
+       const footer = document.querySelector("footer")
+       footer.onclick = function(){
+
+        const footerA = footer.querySelector("a")
+        alert(footerA.href)
+
+       }
+
+
+      }
+      revealFooterLink()
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -212,7 +237,17 @@
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {}
+      const changeColorWithRandom = function () {
+
+        const h2 =document.getElementById("changeMyColor")
+
+        const r = math.floor(Math.random()*256)
+       const g = math.floor(Math.random()*256)
+       const b = math.floor(Math.random()*256)
+
+          h2.style.backgroundColor = `rgb(${r}${g}${b} / 100%)`
+
+      }
     </script>
   </body>
 </html>
