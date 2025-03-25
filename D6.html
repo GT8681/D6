@@ -56,7 +56,7 @@
 
       <a href="https://epicode.com/it/">Questo link porta al sito di Epicode</a>
 
-      <div>
+      <div class="es3">
         <p>Questo testo è un placeholder per gli esercizi</p>
       </div>
     </div>
@@ -107,8 +107,13 @@
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
+        const changePcontent = document.getElementsByTagName("p");
+        const cambiTest= changePcontent.className ="es3";
+        cambiTest.innerText="oggi e una bellissima giornata";
 
-      const changePcontent = function () {}
+
+
+
 
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
