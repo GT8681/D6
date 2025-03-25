@@ -239,15 +239,19 @@
 
       const changeColorWithRandom = function () {
 
-        const h2 =document.getElementById("changeMyColor")
+        
 
         const r = math.floor(Math.random()*256)
        const g = math.floor(Math.random()*256)
        const b = math.floor(Math.random()*256)
 
-          h2.style.backgroundColor = `rgb(${r}${g}${b} / 100%)`
+          h2.style.backgroundColor = `rgb(${r} ${g} ${b} / 100%)`
+          
 
       }
+
+             const h2 =document.getElementById("changeMyColor")
+             h2.onclick = changeColorWithRandom
     </script>
   </body>
 </html>
